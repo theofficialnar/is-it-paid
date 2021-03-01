@@ -1,0 +1,36 @@
+@use 'colors';
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 20vw;
+  height: 100vh;
+  border-right: 1px solid colors.$secondary-color;
+  padding: 2rem 0 0 1.5rem;
+  box-shadow: 2px 0 10px colors.$box-shadow;
+}
+
+.navItem {
+  padding: 8px;
+  color: colors.$secondary-text-color
+}
+
+.active {
+  font-weight: bold;
+  background-color: colors.$secondary-color;
+  border-radius: 5px 0 0 5px;
+  color: colors.$primary-text-color;
+}
+
+.title {
+  margin: 0;
+  font-size: 2.2em;
+  display: inline;
+}
+
+.titleContainer {
+  display: flex;
+  padding: 0 8px 16px 8px;
+  align-items: center;
+  justify-content: space-between;
+}

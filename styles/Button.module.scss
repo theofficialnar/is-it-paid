@@ -1,0 +1,43 @@
+@use 'colors';
+
+.button {
+  font-size: 1em;
+  padding: 4px;
+  background-color: colors.$primary-color;
+  border: 1px solid colors.$primary-color;
+  color: colors.$primary-bg-color;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+
+  &:hover {
+    box-shadow: 0 0 6px 3px #dadada;
+    cursor: pointer;
+    transition: box-shadow 400ms ease;
+  }
+}
+
+.button.outline {
+  background-color: transparent;
+  color: colors.$primary-color;
+
+  &:hover {
+    box-shadow: none;
+    background-color: colors.$primary-color;
+    color: colors.$primary-bg-color;
+    transition: color 400ms ease, background-color 400ms ease;
+  }
+}
+
+.button.transparent {
+  background-color: transparent;
+  border: 1px solid transparent;
+  color: colors.$primary-text-color;
+
+  &:hover {
+    box-shadow: none;
+    border: 1px solid colors.$primary-text-color;
+    transition: border 400ms ease;
+  }
+}
