@@ -1,5 +1,9 @@
 @use 'colors';
 
+:host[hidden] {
+  display: hidden;
+}
+
 html,
 body {
   padding: 0;

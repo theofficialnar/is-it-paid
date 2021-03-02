@@ -36,3 +36,9 @@ This is a web app that can be used to track the status of your monthly bills
 ```
 
 4. In your browser visit **http://localhost:3000**
+
+## Tech Stack
+
+- NextJS
+- Typescript
+- SASS

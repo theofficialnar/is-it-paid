@@ -3,16 +3,31 @@
 .nav {
   display: flex;
   flex-direction: column;
-  flex-basis: 20vw;
+  flex-basis: 260px;
   height: 100vh;
   border-right: 1px solid colors.$secondary-color;
-  padding: 2rem 0 0 1.5rem;
+  padding: 2em 0 0 1em;
   box-shadow: 2px 0 10px colors.$box-shadow;
+  white-space: nowrap;
+  overflow: hidden;
+  transition: flex-basis 400ms ease-in-out;
+
+  &.collapsed {
+    flex-basis: 70px;
+  }
+
+  button {
+    margin-right: 20px;
+  }
 }
 
 .navItem {
-  padding: 8px;
-  color: colors.$secondary-text-color
+  padding: 12px;
+  color: colors.$secondary-text-color;
+
+  span {
+    margin-left: 30px;
+  }
 }
 
 .active {
@@ -25,12 +40,10 @@
 .title {
   margin: 0;
   font-size: 2.2em;
-  display: inline;
 }
 
 .titleContainer {
   display: flex;
   padding: 0 8px 16px 8px;
   align-items: center;
-  justify-content: space-between;
 }

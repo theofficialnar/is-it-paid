@@ -1,4 +1,5 @@
 @use 'colors';
+// TODO: Add style when button is pressed
 
 .button {
   font-size: 1em;
@@ -16,28 +17,28 @@
     cursor: pointer;
     transition: box-shadow 400ms ease;
   }
-}
 
-.button.outline {
-  background-color: transparent;
-  color: colors.$primary-color;
-
-  &:hover {
-    box-shadow: none;
-    background-color: colors.$primary-color;
-    color: colors.$primary-bg-color;
-    transition: color 400ms ease, background-color 400ms ease;
+  &.outline {
+    background-color: transparent;
+    color: colors.$primary-color;
+  
+    &:hover {
+      box-shadow: none;
+      background-color: colors.$primary-color;
+      color: colors.$primary-bg-color;
+      transition: color 400ms ease, background-color 400ms ease;
+    }
   }
-}
 
-.button.transparent {
-  background-color: transparent;
-  border: 1px solid transparent;
-  color: colors.$primary-text-color;
-
-  &:hover {
-    box-shadow: none;
-    border: 1px solid colors.$primary-text-color;
-    transition: border 400ms ease;
+  &.transparent {
+    background-color: transparent;
+    border: 1px solid transparent;
+    color: colors.$primary-text-color;
+  
+    &:hover {
+      box-shadow: none;
+      border: 1px solid colors.$primary-text-color;
+      transition: border 400ms ease;
+    }
   }
 }
