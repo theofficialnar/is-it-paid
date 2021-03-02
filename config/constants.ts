@@ -1,4 +1,9 @@
-export const NAV_ITEMS = Object.freeze([
+interface NavItem {
+  name: string,
+  path: string,
+}
+
+export const NAV_ITEMS: ReadonlyArray<NavItem> = Object.freeze([
   {
     name: 'Dashboard',
     path: '/',
