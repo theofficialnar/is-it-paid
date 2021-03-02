@@ -11,13 +11,13 @@ import { NAV_ITEMS } from '../config/constants';
 const cx = classNames.bind(styles);
 
 export default function Nav() {
-  const { pathname } = useRouter();
+  const { pathname }: { pathname: string} = useRouter();
 
   return (
     <nav className={styles.nav}>
       <div className={styles.titleContainer}>
         <h1 className={styles.title}>Is It Paid?</h1>
-        <Button onClick={handleCollapse} transparent>
+        <Button onClick={handleCollapse} transparent id="test">
           <FontAwesomeIcon icon={faChevronLeft} />
         </Button>
       </div>
@@ -41,13 +41,14 @@ export default function Nav() {
  * @param {string} navItemRoute Route of nav item.
  * @returns {Object} Classname object.
  */
-function getClassName(activeRoute, navItemRoute) {
+function getClassName(activeRoute: string, navItemRoute: string): string {
   return cx({
     navItem: true,
     active: activeRoute === navItemRoute,
   });
 }
 
-function handleCollapse() {
+function handleCollapse(): void {
+  // TODO: Handle collapse
   console.log('handleCollapse')
 }

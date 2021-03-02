@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import Layout from '../components/Layout';
-import styles from '../styles/Index.module.css';
+import styles from '../styles/Index.module.scss';
 
 export default function Index() {
   return (
